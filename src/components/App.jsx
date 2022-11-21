@@ -18,5 +18,9 @@ import { Profile } from './Profile/Pofile';
 import userData from '../user.json';
 
 export const App = () => {
-  return <Profile user={userData} />;
+  return (
+    <section className="section">
+      <Profile user={userData} />
+    </section>
+  );
 };
