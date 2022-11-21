@@ -18,9 +18,5 @@ import { Profile } from './Profile/Pofile';
 import userData from '../user.json';
 
 export const App = () => {
-  return (
-    <div>
-      <Profile user={userData} />
-    </div>
-  );
+  return <Profile user={userData} />;
 };
