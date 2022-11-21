@@ -4,7 +4,7 @@ export const Profile = ({ user }) => {
   console.log(user);
   const { avatar, username, tag, location, stats } = user;
   return (
-    <div className={css.profile_container}>
+    <div className={css.profile}>
       <div className={css.description}>
         <img src={avatar} alt={username} className={css.avatar} />
         <p className="name">{username}</p>
