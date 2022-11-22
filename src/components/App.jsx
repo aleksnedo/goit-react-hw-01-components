@@ -15,12 +15,22 @@
 //   );
 // };
 import { Profile } from './Profile/Pofile';
-import userData from '../user.json';
+import user from '../user.json';
+import { Statistics } from './Statistics/Statistics';
+import upcomingStats from '../data.json';
 
 export const App = () => {
   return (
-    <section className="section">
-      <Profile user={userData} />
-    </section>
+    <div className="sections-wrapper">
+      <Profile
+        avatar={user.avatar}
+        username={user.username}
+        tag={user.tag}
+        location={user.locations}
+        stats={user.stats}
+      />
+
+      <Statistics title="Upload stats" stats={upcomingStats} />
+    </div>
   );
 };
