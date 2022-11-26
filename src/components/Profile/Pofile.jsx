@@ -1,5 +1,17 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css';
+
+import {
+  ProfileContainer,
+  Description,
+  Avatar,
+  Username,
+  Tag,
+  Location,
+  Stats,
+  Item,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
 export const Profile = ({
   avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
@@ -8,37 +20,30 @@ export const Profile = ({
   location,
   stats: { followers, views, likes },
 }) => {
-  // const {
-  //   avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-  //   username,
-  //   tag,
-  //   location,
-  //   stats: { followers, views, likes },
-  // } = user;
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img src={avatar} alt={username} className={css.avatar} />
-        <p className={css.username}>{username}</p>
-        <p className={css.tag}>@{tag}</p>
-        <p className={css.location}>{location}</p>
-      </div>
+    <ProfileContainer>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className={css.stats}>
-        <li className={css.item}>
-          <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{followers}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Views</span>
-          <span className={css.quantity}>{views}</span>
-        </li>
-        <li className={css.item}>
-          <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <Item>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </Item>
+        <Item>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </Item>
+        <Item>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </Item>
+      </Stats>
+    </ProfileContainer>
   );
 };
 
