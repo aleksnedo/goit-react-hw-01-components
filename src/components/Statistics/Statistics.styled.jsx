@@ -7,3 +7,7 @@ export const Section = styled.section`
   border: solid 1px black;
   width: 400px;
 `;
+
+export const Title = styled.h2`
+  font-weight: 600;
+`;

@@ -16,6 +16,7 @@ export const App = () => {
       />
 
       <Statistics title="Upload stats" stats={upcomingStats} />
+      <Statistics stats={upcomingStats} />
     </Container>
   );
 };

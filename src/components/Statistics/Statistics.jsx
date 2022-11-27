@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { Section } from './Statistics.styled';
+import { Section, Title } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <Section>
-      <h2>{title}</h2>
+      {title !== undefined && <Title>{title}</Title>}
 
       <ul>
         {stats.map(({ id, label, percentage }) => {
