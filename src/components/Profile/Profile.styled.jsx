@@ -40,8 +40,6 @@ export const Location = styled.p`
 `;
 
 export const Stats = styled.ul`
-  margin: 0px;
-  padding: 0px;
   display: flex;
   width: 250px;
 `;
