@@ -5,7 +5,6 @@ export const Section = styled.section`
   text-align: center;
   border-radius: 5px;
   box-shadow: 3px 3px 30px 3px rgba(0, 0, 0, 0.75);
-  /* width: 400px; */
   margin-bottom: 15px;
   transition: scale 200ms cubic-bezier(0.455, 0.03, 0.515, 0.5);
   &:hover {
